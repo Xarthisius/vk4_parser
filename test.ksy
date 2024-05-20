@@ -37,7 +37,7 @@ types:
     instances:
       value:
         pos: root_pos
-        type: u1
+        type: data_image
   header:
     seq:
       - id: magic
@@ -260,9 +260,6 @@ types:
       - id: count_y
         type: u2
   data_image:
-    params:
-      - id: root_pos
-        type: u8
     seq:
       - id: width
         type: u4
@@ -287,8 +284,5 @@ types:
       #- id: data
       #  size: byte_size
     instances:
-      value:
-        pos: root_pos
-        type: u1
       bps:
         value: bit_depth >> 3
