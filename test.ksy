@@ -51,6 +51,11 @@ instances:
   height_thumbnail:
     pos: offset_table.height_thumbnail
     type: true_color_image
+  strings:
+    pos: offset_table.string_data
+    type: coded_string
+    repeat: expr
+    repeat-expr: 2
 
 types:
   blank:
@@ -336,6 +341,14 @@ types:
     instances:
       bps:
         value: bit_depth >> 3
+  coded_string:
+    seq:
+      - id: length
+        type: u4
+      - id: string
+        type: str
+        size: length * 2
+        encoding: UTF-16LE
   rgb_record:
     seq:
       - id: red
