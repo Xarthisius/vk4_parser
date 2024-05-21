@@ -39,6 +39,18 @@ instances:
       cases:
         true: data_image(offset_table.height[_index])
         false: blank
+  color_peak_thumbnail:
+    pos: offset_table.color_peak_thumbnail
+    type: true_color_image
+  color_light_thumbnail:
+    pos: offset_table.color_light_thumbnail
+    type: true_color_image
+  light_thumbnail:
+    pos: offset_table.light_thumbnail
+    type: true_color_image
+  height_thumbnail:
+    pos: offset_table.height_thumbnail
+    type: true_color_image
 
 types:
   blank:
@@ -77,7 +89,7 @@ types:
         repeat-expr: 3
       - id: color_peak_thumbnail
         type: u4
-      - id: color_thumbnail
+      - id: color_light_thumbnail
         type: u4
       - id: light_thumbnail
         type: u4
