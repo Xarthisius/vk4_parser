@@ -1,6 +1,6 @@
 meta:
-  id: list
-  file-extension: list
+  id: dotnetlist
+  file-extension: dotnetlist
   endian: le
 seq:
   - id: records
@@ -100,7 +100,7 @@ types:
           cases:
             binary_type_enum::primitive: primitive_type
             binary_type_enum::system_class: system_class_name
-            binary_type_enum::class: class_info
+            binary_type_enum::klass: class_info
             binary_type_enum::primitive_array: primitive_type
       - id: members
         repeat: expr
@@ -192,7 +192,7 @@ enums:
     1: string
     2: object
     3: system_class
-    4: class
+    4: klass
     5: object_array
     6: string_array
     7: primitive_array
