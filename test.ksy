@@ -308,9 +308,9 @@ types:
       - id: palette_range_max
         type: u4
       - id: palette
-        type: u4
+        type: rgb_record
         repeat: expr
-        repeat-expr: 768
+        repeat-expr: 256
       - id: data
         size: width * height * bit_depth / 8
     instances:
